@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Crimes in your region</title>
+    <style>
+        .searchWrapper {
+            position: absolute; 
+            z-index: 1; 
+            width: 96%;
+        }
+        .searchSuggestions {
+            list-style-type: none; 
+            padding-left: 0; 
+            max-height: 500px; 
+            overflow: scroll; 
+            border-radius: 7px;
+        }
+        .chart {
+            display: none; 
+            margin-top: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-5">Check the crime records in your region</h2>
+        <p class="mb-2">Showing all reconds of street crimes recorded previous month.</p>
+
+        <div id="searchWrapper" class="searchWrapper">
+            <input
+                type="text"
+                name="searchBar"
+                id="searchBar"
+                placeholder="Select your region"
+                class="form-control list-group-item"
+            />
+            <ul id="searchSuggestions" class="searchSuggestions"></ul>
+        </div>
+        <div id="chart" class="chart container"></div>
+    </div>
+
+
+
+    <!-- apexcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- js file -->
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
